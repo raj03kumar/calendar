@@ -1,0 +1,94 @@
+body{
+    font-family: sans-serif;
+    padding: 0.5em;
+}
+
+.calendar{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 0;
+}
+
+#current-month{
+    font-size: 18px;
+}
+
+.calendar table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th{
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #484848;
+}
+
+.calendar td{
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+.calendar td:not(.empty):hover{
+    cursor: pointer;
+    background: #f1f1f1;
+}
+
+.calendar th, .calendar td{
+    text-align: center;
+    padding: 0.5em;
+}
+
+#prev-month-btn, #next-month-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 4em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+#prev-month-btn:hover, #next-month-btn:hover{
+    background-color: #efefef;
+}
+
+.calendar button span{
+    font-size: 3em;
+}
+
+#calendar-dates{
+    font-size: 0.9em;
+}
+
+/* Dynamic class for JavaScript */
+.today{
+    background: #b6dfff;
+    color: #2a5bff;
+}
+
+/* Media queries */
+@media screen and (min-width: 800px) {
+    #calendar-dates{
+        font-size: 1.3em;
+    }
+    .calendar th, .calendar td{
+        text-align: center;
+        padding: 1.1em 2em;
+    }
+    #current-month{
+        font-size: 2em;
+    }
+}
